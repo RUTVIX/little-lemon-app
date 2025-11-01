@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+/* src/App.css */
+
+/* --- GLOBAL STYLES --- */
+
+/* This sets the base font and removes default margin */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Karla', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* --- TEXT ELEMENTS (h1-h6, p, span) --- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Markazi Text', serif;
+  color: #495E57; /* Dark Green */
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-size: 40pt;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h2 {
+  font-size: 32pt;
+}
+
+p, span, li, a {
+  font-family: 'Karla', sans-serif;
+  color: #333333; /* Dark Gray for body text */
+  line-height: 1.5;
+  font-size: 16pt;
+}
+
+/* --- NAVIGATION ELEMENTS (nav, ul, li) --- */
+
+/* This styles the <nav> component itself */
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between; /* Pushes logo left, links right */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1rem 2rem; /* 1rem top/bottom, 2rem left/right */
+  border-bottom: 1px solid #ccc;
+}
+
+/* This styles the <ul> inside the <nav> */
+nav ul {
+  display: flex;
+  list-style-type: none; /* Removes bullet points */
+  margin: 0;
+  padding: 0;
+  gap: 2rem; /* Creates space between links */
+}
+
+/* This styles the links inside the <li> tags */
+nav ul a {
+  text-decoration: none;
+  color: #495E57;
+  font-weight: 700;
+}
+
+nav ul a:hover {
+  color: #F4CE14; /* Primary Yellow on hover */
+}
+
+
+/* --- IMAGE (img) --- */
+
+img {
+  max-width: 100%; /* Makes all images responsive */
+  height: auto;
+  border-radius: 8px; /* Our global border radius */
+}
+
+/* --- HOMEPAGE COMPONENT STYLES --- */
+
+/* Call to Action (Hero) Section */
+.hero-section {
+  background-color: #495E57; /* Dark Green */
+  padding: 2rem;
   color: white;
+  display: flex; /* Use flex for side-by-side layout */
+  justify-content: space-between;
+  gap: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-section h1 {
+  color: #F4CE14; /* Yellow */
+  font-size: 50pt;
+  margin-bottom: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero-section h2 {
+  color: white;
+  font-size: 32pt;
+  margin-top: -1.5rem; /* Pulls it closer to the h1 */
+}
+
+.hero-section p {
+  color: white;
+  font-size: 16pt;
+  max-width: 500px;
+}
+
+.hero-button {
+  background-color: #F4CE14;
+  color: #495E57;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18pt;
+  border: none;
+  cursor: pointer;
+  display: inline-block; /* Makes padding and margin work */
+  margin-top: 1rem;
+}
+
+.hero-button:hover {
+  background-color: #EE9972; /* Highlight color */
+}
+
+
+/* Generic Section Styles for Homepage */
+.specials-section,
+.testimonials-section,
+.about-section {
+  padding: 4rem 2rem;
+}
+
+.specials-section h2,
+.testimonials-section h2,
+.about-section h2 {
+  font-size: 32pt;
+  color: #333;
 }
